@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Alexander Dimitriu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <nav id="navigation">
+        <div class="logo">Portfolio.</div>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Home sekce -->
+        <section id="home" class="section home-section">
+            <div class="intro">
+                <h3>Hello, it's Me</h3>
+                <h1>Alexander Dimitriu</h1>
+                <h2>And I'm a <span class="highlight">Frontend Developer</span></h2>
+                <p>Specializuji se na tvorbu moderních webových aplikací s důrazem na UX/UI a inovace v technologiích.</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/TwistResell" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="https://twitter.com/churaqtwist" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+                    <a href="https://instagram.com/_.twist._" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://github.com/AlexanderDimitriu" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
+                </div>
+                <a class="btn" href="#">Download CV</a>
+            </div>
+            <div class="abstract-img">
+                <!-- Abstraktní SVG místo profilové fotky -->
+                <svg width="260" height="260" viewBox="0 0 200 200">
+                    <defs>
+                        <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#00fff0" stop-opacity="1"/>
+                            <stop offset="100%" stop-color="#00fff0" stop-opacity="0"/>
+                        </radialGradient>
+                    </defs>
+                    <polygon points="100,10 190,55 190,145 100,190 10,145 10,55"
+                        fill="url(#g1)" opacity="0.35"/>
+                    <ellipse cx="100" cy="105" rx="70" ry="55" fill="#23252a"/>
+                    <ellipse cx="105" cy="100" rx="47" ry="34" fill="#00fff0" opacity="0.17"/>
+                    <ellipse cx="80" cy="100" rx="21" ry="18" fill="#00fff0" opacity="0.34"/>
+                    <ellipse cx="120" cy="97" rx="17" ry="14" fill="#00fff0" opacity="0.14"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About sekce -->
+        <section id="about" class="section about-section">
+            <div class="abstract-img small">
+                <svg width="170" height="170" viewBox="0 0 200 200">
+                    <polygon points="100,10 190,55 190,145 100,190 10,145 10,55"
+                        fill="#00fff0" opacity="0.12"/>
+                    <ellipse cx="100" cy="105" rx="70" ry="55" fill="#252830"/>
+                    <ellipse cx="120" cy="107" rx="20" ry="16" fill="#00fff0" opacity="0.13"/>
+                </svg>
+            </div>
+            <div>
+                <h2>About <span class="highlight">Me</span></h2>
+                <p>Frontend Developer! Mám zkušenosti s návrhem moderních webových aplikací, kladu důraz na všechny detaily a čistý, funkční UX/UI design. Sleduji trendy a přináším inovace do každého projektu.</p>
+                <a class="btn" href="#">Read More</a>
+            </div>
+        </section>
+
+        <!-- Services sekce -->
+        <section id="services" class="section services-section">
+            <h2>Our <span class="highlight">Services</span></h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Tvorba moderních webových aplikací (HTML, CSS, JavaScript, React).</p>
+                    <a class="btn-service" href="#">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Graphic Design</h3>
+                    <p>Návrh elegantního a moderního designu pro web i tisk.</p>
+                    <a class="btn-service" href="#">Read More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Digital Marketing</h3>
+                    <p>Sociální sítě, SEO, online reklama pro váš projekt nebo značku.</p>
+                    <a class="btn-service" href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio sekce -->
+        <section id="portfolio" class="section portfolio-section">
+            <h2>Latest <span class="highlight">Project</span></h2>
+            <div class="portfolio-gallery">
+                <img src="img/jablkoweb.png" alt="Projekt 1">
+                <img src="img/supremeweb.png" alt="Projekt 2">
+                
+            </div>
+        </section>
+
+        <!-- Contact sekce -->
+        <section id="contact" class="section contact-section">
+            <h2>Contact <span class="highlight">Me!</span></h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2025 Alexander Dimitriu |
+            <a href="https://github.com/AlexanderDimitriu" target="_blank" class="git-footer">GitHub</a>
+            | Všechna práva vyhrazena.
+        </p>
+    </footer>
+</div>
+
+<div class="theme-switch">
+    <input type="checkbox" id="theme-toggle" />
+    <label for="theme-toggle">Light/Dark Mode</label>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

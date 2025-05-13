@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #23252a;
+    color: #fff;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 32px;
+    border-radius: 25px;
+    background: #252830;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color .3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+nav ul a.active,
+nav ul a:hover {
+    color: #00fff0;
+    border-bottom: 2px solid #00fff0;
+}
+
+/* Sekce layout */
+.section {
+    padding: 50px 0 30px 0;
+    border-bottom: 1px solid #2c2d35;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.home-section,
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+.home-section { padding-top: 0; }
+.intro h3 { font-weight: 400; font-size: 1.1rem; margin-bottom: 10px; }
+.intro h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
+.intro h2 { font-size: 1.5rem; margin-bottom: 14px; }
+.highlight { color: #00fff0; font-weight: 700; }
+.intro p { max-width: 420px; color: #bdbdbd; margin-bottom: 25px; }
+.socials { display: flex; gap: 15px; margin-bottom: 22px; }
+.socials img {
+    width: 26px;
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px #00fff0);
+    transition: filter 0.3s;
+}
+.socials img:hover {
+    filter: brightness(1) drop-shadow(0 0 8px #00fff0);
+}
+.btn, .btn-service {
+    display: inline-block;
+    padding: 12px 38px;
+    background: #00fff0;
+    color: #252830;
+    font-weight: 700;
+    border-radius: 26px;
+    text-decoration: none;
+    box-shadow: 0 5px 25px #00fff099;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn:hover, .btn-service:hover {
+    background: #252830;
+    color: #00fff0;
+    border: 1.5px solid #00fff0;
+    transform: scale(1.05);
+}
+
+.abstract-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00fff014;
+    border-radius: 24% 76% 62% 38% / 32% 44% 56% 68%;
+    box-shadow: 0 0 55px #00fff0bb;
+    padding: 18px;
+}
+.abstract-img img, .abstract-img svg {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    border-radius: 16%;
+    display: block;
+}
+
+.about-section .profile-pic img {
+    max-width: 235px;
+}
+.about-section {
+    justify-content: flex-start;
+    gap: 50px;
+}
+.about-section h2, .services-section h2, .portfolio-section h2, .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 22px;
+}
+.about-section p {
+    color: #bdbdbd;
+    max-width: 450px;
+    margin-bottom: 16px;
+}
+
+/* Services list */
+.services-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.service-card {
+    background: #23252a;
+    padding: 28px 18px;
+    border-radius: 17px;
+    box-shadow: 0 5px 30px #00fff018;
+    width: 250px;
+    text-align: center;
+}
+.service-card .service-icon {
+    font-size: 2.3rem;
+    margin-bottom: 14px;
+}
+.service-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.service-card p {
+    color: #bdbdbd;
+    margin-bottom: 16px;
+}
+.btn-service {
+    padding: 7px 20px;
+    font-size: .95rem;
+    margin: 0 auto;
+}
+
+/* Portfolio gallery */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 26px;
+}
+.portfolio-gallery img {
+    width: 100%;
+    border-radius: 11px;
+    aspect-ratio: 16/10;
+    box-shadow: 0 9px 40px #00fff029;
+    object-fit: cover;
+}
+
+/* Kontakt */
+.contact-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contact-section input, 
+.contact-section textarea {
+    background: #23252a;
+    border: 1.5px solid #2f2f38;
+    border-radius: 9px;
+    color: #fff;
+    padding: 12px;
+    font-size: 1.05rem;
+    width: 48%;
+    transition: border 0.2s;
+}
+.contact-section textarea {
+    width: 100%;
+    min-height: 95px;
+    resize: vertical;
+}
+.contact-section input:focus, 
+.contact-section textarea:focus {
+    outline: none;
+    border: 1.5px solid #00fff0;
+}
+.contact-section button {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #acacac;
+    margin-top: 38px;
+    font-size: .95rem;
+    padding-bottom: 18px;
+    border-top: 1px solid #23252a;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 1100px){
+    .services-list { flex-direction: column; }
+    .portfolio-gallery { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px){
+    .home-section, .about-section { flex-direction: column; gap: 24px; text-align: center; }
+    .profile-pic img { max-width: 200px; }
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav.visible ul {
+        display: flex;
+    }
+}
+
+.portfolio-gallery img:hover {
+    box-shadow: 0 0 15px #00fff0;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+body.light-mode {
+    background: #f4f4f9;
+    color: #333;
+}
+
+.light-mode .intro h3,
+.light-mode .intro h1,
+.light-mode .intro h2,
+.light-mode .socials img,
+.light-mode nav ul a,
+.light-mode .services-section h2,
+.light-mode .portfolio-section h2,
+.light-mode .contact-section h2,
+.light-mode footer p {
+    color: #000000;
+}
+
+.light-mode .highlight {
+    color: #1273a7;  /* Můžete vybrat jinou barvu, která bude lépe kontrastovat ve světlém režimu */
+}
+
+/* Aktualizace barev pro další části */
+.light-mode .btn, 
+.light-mode .btn-service {
+    background: #333;
+    color: #f4f4f9;
+}
+
+.light-mode .btn:hover, 
+.light-mode .btn-service:hover {
+    background: #f4f4f9;
+    color: #333;
+}
+
