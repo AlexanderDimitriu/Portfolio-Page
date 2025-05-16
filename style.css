@@ -137,18 +137,30 @@ nav ul a:hover {
 
 /* Services list */
 .services-list {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automaticky rozvrhne podle šířky obrazovky */
+    gap: 24px; /* Větší mezery mezi kartami */
+    justify-items: center; /* Zajistí zarovnání karet do středu */
     margin-top: 18px;
 }
+
 .service-card {
     background: #23252a;
     padding: 28px 18px;
     border-radius: 17px;
     box-shadow: 0 5px 30px #00fff018;
-    width: 250px;
+    width: 100%; /* Použití 100% šířky uvnitř gridu */
+    max-width: 280px; /* Mírně větší maximální šířka */
     text-align: center;
+    margin-bottom: 16px; /* Odstup mezi kartami na mobilních zařízeních */
+}
+
+/* Media Queries pro responzivní design */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column; /* Stohování karet na mobilních zařízeních */
+        align-items: center;
+    }
 }
 .service-card .service-icon {
     font-size: 2.3rem;
@@ -225,6 +237,20 @@ footer {
     padding-bottom: 18px;
     border-top: 1px solid #23252a;
 }
+footer p {
+    margin-bottom: 10px;
+    color: aqua;
+}
+
+footer a {
+    color: aqua; /* nebo případně jinou barvu, kterou chcete */
+    text-decoration: none; /* pokud nechcete podtržení */
+}
+
+footer a:hover {
+    color: #00fff0; /* barva při hoveru, opční */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -251,39 +277,5 @@ html {
     box-shadow: 0 0 15px #00fff0;
     transform: scale(1.02);
     transition: all 0.3s ease;
-}
-
-body.light-mode {
-    background: #f4f4f9;
-    color: #333;
-}
-
-.light-mode .intro h3,
-.light-mode .intro h1,
-.light-mode .intro h2,
-.light-mode .socials img,
-.light-mode nav ul a,
-.light-mode .services-section h2,
-.light-mode .portfolio-section h2,
-.light-mode .contact-section h2,
-.light-mode footer p {
-    color: #000000;
-}
-
-.light-mode .highlight {
-    color: #1273a7;  /* Můžete vybrat jinou barvu, která bude lépe kontrastovat ve světlém režimu */
-}
-
-/* Aktualizace barev pro další části */
-.light-mode .btn, 
-.light-mode .btn-service {
-    background: #333;
-    color: #f4f4f9;
-}
-
-.light-mode .btn:hover, 
-.light-mode .btn-service:hover {
-    background: #f4f4f9;
-    color: #333;
 }
 
